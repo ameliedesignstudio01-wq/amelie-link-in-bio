@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amélie Design Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Montserrat:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #eeecea;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 2.5rem 1.25rem 4rem;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* ── LOGO ── */
+    .logo { text-align: center; margin-bottom: 1.75rem; }
+    .wordmark {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 300;
+      font-size: 42px;
+      letter-spacing: 0.2em;
+      color: #1e2220;
+      line-height: 1;
+    }
+    .divider {
+      width: 36px;
+      height: 0.5px;
+      background: #7a9080;
+      margin: 10px auto;
+    }
+    .studio {
+      font-size: 9px;
+      letter-spacing: 0.6em;
+      color: #7a9080;
+      text-transform: uppercase;
+    }
+
+    /* ── PHOTO ── */
+    .photo-ring {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      border: 1.5px solid #7a9080;
+      overflow: hidden;
+      margin: 0 auto 1.25rem;
+    }
+    .photo-ring img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    /* ── BIO TEXT ── */
+    .tagline {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 22px;
+      color: #1e2220;
+      text-align: center;
+      letter-spacing: 0.03em;
+      margin-bottom: 0.5rem;
+    }
+    .desc {
+      font-size: 11px;
+      color: #7a9080;
+      text-align: center;
+      letter-spacing: 0.12em;
+      line-height: 2;
+      margin-bottom: 2rem;
+    }
+
+    /* ── RULE ── */
+    .rule {
+      width: 100%;
+      height: 0.5px;
+      background: #b0c0b8;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ── SECTION LABEL ── */
+    .section-label {
+      font-size: 9px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: #b0c0b8;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      width: 100%;
+      padding: 15px 18px;
+      border-radius: 3px;
+      margin-bottom: 10px;
+      text-decoration: none;
+      transition: opacity 0.15s, transform 0.1s;
+      cursor: pointer;
+    }
+    .btn:hover { opacity: 0.88; transform: translateY(-1px); }
+    .btn:active { transform: translateY(0); }
+
+    .btn-dark { background: #1e2220; }
+    .btn-outline {
+      background: transparent;
+      border: 0.5px solid #7a9080;
+    }
+    .btn-sage { background: #7a9080; }
+
+    .btn-icon {
+      width: 34px;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .btn-icon svg { width: 20px; height: 20px; }
+
+    .btn-text { flex: 1; }
+    .btn-label {
+      display: block;
+      font-size: 8.5px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+    .btn-title {
+      display: block;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 300;
+      font-size: 18px;
+      letter-spacing: 0.05em;
+    }
+
+    .btn-arrow { flex-shrink: 0; }
+    .btn-arrow svg { width: 16px; height: 16px; }
+
+    /* color variants */
+    .btn-dark .btn-label  { color: #7a9080; }
+    .btn-dark .btn-title  { color: #dde4e0; }
+    .btn-dark .btn-arrow svg { stroke: #7a9080; }
+
+    .btn-outline .btn-label { color: #b0c0b8; }
+    .btn-outline .btn-title { color: #1e2220; }
+    .btn-outline .btn-arrow svg { stroke: #b0c0b8; }
+
+    .btn-sage .btn-label  { color: rgba(238,236,234,0.7); }
+    .btn-sage .btn-title  { color: #eeecea; }
+    .btn-sage .btn-arrow svg { stroke: #dde4e0; }
+
+    /* ── FOOTER ── */
+    .footer {
+      margin-top: 2.5rem;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      color: #b0c0b8;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- Logo -->
+  <div class="logo">
+    <div class="wordmark">Amélie</div>
+    <div class="divider"></div>
+    <div class="studio">Design Studio</div>
+  </div>
+
+  <div class="photo-ring">
+    <img src="photo.png" alt="Amélie Design Studio" />
+  </div>
+
+  <div class="tagline">Spațiul tău, povestea ta.</div>
+  <div class="desc">
+    Design interior · Japandi &amp; minimalist<br />
+    Transilvania &amp; toată România
+  </div>
+
+  <div class="rule"></div>
+  <div class="section-label">Hai să vorbim</div>
+
+  <a class="btn btn-dark"
+     href="mailto:amelie.design.studio01@gmail.com?subject=Consultație%20gratuită%20—%20Amélie%20Design%20Studio&body=Bună%2C%0A%0ASunt%20interesat%2Fă%20de%20o%20consultație%20gratuită%20de%2030%20de%20minute.%0A%0ASpațiul%20meu%20este...">
+    <div class="btn-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#7a9080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+    </div>
+    <div class="btn-text">
+      <span class="btn-label">Consultație gratuită · 30 min</span>
+      <span class="btn-title">Scrie-mi un email</span>
+    </div>
+    <div class="btn-arrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </div>
+  </a>
+
+  <a class="btn btn-outline"
+     href="tel:+40740782700">
+    <div class="btn-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#7a9080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.29 6.29l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    </div>
+    <div class="btn-text">
+      <span class="btn-label">Sunați sau WhatsApp</span>
+      <span class="btn-title">+40740782700</span>
+    </div>
+    <div class="btn-arrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </div>
+  </a>
+
+  <a class="btn btn-outline"
+     href="https://www.instagram.com/ameliedesign.studio"
+     target="_blank" rel="noopener">
+    <div class="btn-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#7a9080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="#7a9080"/></svg>
+    </div>
+    <div class="btn-text">
+      <span class="btn-label">Instagram</span>
+      <span class="btn-title">@ameliedesign.studio</span>
+    </div>
+    <div class="btn-arrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </div>
+  </a>
+
+  <a class="btn btn-outline"
+     href="https://www.facebook.com/people/Am%C3%A9lie-Design-Studio/61589681037642/"
+     target="_blank" rel="noopener">
+    <div class="btn-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#7a9080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+    </div>
+    <div class="btn-text">
+      <span class="btn-label">Facebook</span>
+      <span class="btn-title">Amélie Design Studio</span>
+    </div>
+    <div class="btn-arrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </div>
+  </a>
+
+  <div class="rule" style="margin-top:0.75rem;"></div>
+  <div class="section-label">Servicii</div>
+
+  <!-- PROIECT COMPLET -->
+  <a class="btn btn-sage"
+     href="mailto:amelie.design.studio01@gmail.com?subject=Proiect%20complet%20de%20design%20interior&body=Bună%2C%0A%0ASunt%20interesat%2Fă%20de%20un%20proiect%20complet%20de%20design%20interior.%0A%0ASpațiul%20meu%20este...">
+    <div class="btn-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#eeecea" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+    </div>
+    <div class="btn-text">
+      <span class="btn-label">Cel mai popular</span>
+      <span class="btn-title">Proiect complet</span>
+    </div>
+    <div class="btn-arrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </div>
+  </a>
+
+  <!-- CONSULTANȚĂ DE STIL -->
+  <a class="btn btn-outline"
+     href="mailto:amelie.design.studio01@gmail.com?subject=Consultanță%20de%20stil&body=Bună%2C%0A%0ASunt%20interesat%2Fă%20de%20o%20consultanță%20de%20stil.">
+    <div class="btn-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#7a9080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+    </div>
+    <div class="btn-text">
+      <span class="btn-label">Stiluri &amp; materiale</span>
+      <span class="btn-title">Consultanță de stil</span>
+    </div>
+    <div class="btn-arrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </div>
+  </a>
+
+  <!-- E-DESIGN -->
+  <a class="btn btn-outline"
+     href="mailto:amelie.design.studio01@gmail.com?subject=E-design%20online&body=Bună%2C%0A%0ASunt%20interesat%2Fă%20de%20serviciul%20de%20e-design%20online.">
+    <div class="btn-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#7a9080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+    </div>
+    <div class="btn-text">
+      <span class="btn-label">100% online · toată România</span>
+      <span class="btn-title">E-design</span>
+    </div>
+    <div class="btn-arrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </div>
+  </a>
+
+
+</div>
+</body>
+</html>
